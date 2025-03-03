@@ -3,9 +3,7 @@ use clap::{
 };
 
 use weechat::{
-    buffer::Buffer,
-    hooks::{Command, CommandCallback, CommandSettings},
-    Args, Weechat,
+    buffer::Buffer, hooks::{Command, CommandCallback, CommandSettings}, Args, Prefix, Weechat
 };
 
 use super::parse_and_run;
@@ -82,7 +80,10 @@ impl VerificationCommand {
             ("cancel", _) => {
                 Self::verification(servers, buffer, CommandType::Cancel)
             }
-            _ => unreachable!(),
+            _ => Weechat::print(&format!(
+                "{}: Unknown command",
+                Weechat::prefix(Prefix::Error)
+            )),
         }
     }
 

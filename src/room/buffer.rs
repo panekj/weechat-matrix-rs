@@ -152,8 +152,8 @@ impl RoomBuffer {
         impl<'a> From<BufferLine<'a>> for LineCopy {
             fn from(line: BufferLine) -> Self {
                 Self {
-                    date: line.date(),
-                    date_printed: line.date_printed(),
+                    date: line.date() as _,
+                    date_printed: line.date_printed() as _,
                     message: line.message().to_string(),
                     prefix: line.prefix().to_string(),
                     tags: line.tags().iter().map(|t| t.to_string()).collect(),
@@ -264,7 +264,7 @@ impl RoomBuffer {
                 let tags: Vec<&str> =
                     line.tags.iter().map(|t| t.as_str()).collect();
                 buffer.print_date_tags(
-                    rendered.message_timestamp,
+                    rendered.message_timestamp as _,
                     &tags,
                     &message,
                 )

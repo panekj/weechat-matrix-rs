@@ -8,7 +8,7 @@ use clap::{
 use weechat::{
     buffer::Buffer,
     hooks::{Command, CommandCallback, CommandSettings},
-    Args, Weechat,
+    Args, Prefix, Weechat,
 };
 
 use super::parse_and_run;
@@ -96,7 +96,10 @@ impl KeysCommand {
                     );
                     Self::export(server, file, passphrase);
                 }
-                _ => unreachable!(),
+                _ => Weechat::print(&format!(
+                    "{}: Unknown command",
+                    Weechat::prefix(Prefix::Error)
+                )),
             }
         } else {
             Weechat::print("Must be executed on Matrix buffer")

@@ -233,7 +233,10 @@ Use /matrix [command] help to find out more.\n",
             ("verification", Some(subargs)) => {
                 VerificationCommand::run(buffer, &self.servers, subargs)
             }
-            _ => unreachable!(),
+            _ => Weechat::print(&format!(
+                "{}: Unknown command",
+                Weechat::prefix(Prefix::Error)
+            )),
         }
     }
 }

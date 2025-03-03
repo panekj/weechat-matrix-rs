@@ -104,7 +104,7 @@ impl DevicesCommand {
                 Self::delete(servers, buffer, devices);
             }
             _ => Weechat::print(&format!(
-                "{}Subcommand isn't implemented",
+                "{}: Unknown command",
                 Weechat::prefix(Prefix::Error)
             )),
         }
