@@ -30,8 +30,8 @@ image = { version = "0.25.0", default-features = false, features = ["jpeg"] }
 
 [dependencies.weechat]
 # git = "https://github.com/poljar/rust-weechat"
-git = "https://github.com/panekj/rust-weechat"
-branch = "fun-stuff"
+branch = "pj/api-versioning"
+git    = "https://github.com/panekj/rust-weechat"
 # path = "../rust-weechat/crates/weechat"
 features = ["async", "config_macro"]
 
