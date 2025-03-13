@@ -284,7 +284,7 @@ dependencies = [
  "bitflags 2.6.0",
  "cexpr",
  "clang-sys",
- "itertools 0.10.1",
+ "itertools 0.12.1",
  "log",
  "prettyplease",
  "proc-macro2",
@@ -3342,7 +3342,7 @@ dependencies = [
 [[package]]
 name = "weechat"
 version = "0.4.0"
-source = "git+https://github.com/panekj/rust-weechat?branch=pj%2Fapi-versioning#692b8d58f3a0c384cb0028d8089addc4f2d47713"
+source = "git+https://github.com/panekj/rust-weechat?branch=pj%2Fapi-versioning#510203c13d29efbedf68e90e8d73a9babc7a97e9"
 dependencies = [
  "async-task",
  "async-trait",
@@ -3359,7 +3359,7 @@ dependencies = [
 [[package]]
 name = "weechat-macro"
 version = "0.4.0"
-source = "git+https://github.com/panekj/rust-weechat?branch=pj%2Fapi-versioning#692b8d58f3a0c384cb0028d8089addc4f2d47713"
+source = "git+https://github.com/panekj/rust-weechat?branch=pj%2Fapi-versioning#510203c13d29efbedf68e90e8d73a9babc7a97e9"
 dependencies = [
  "libc",
  "proc-macro2",
@@ -3391,7 +3391,7 @@ dependencies = [
 [[package]]
 name = "weechat-sys"
 version = "0.4.0"
-source = "git+https://github.com/panekj/rust-weechat?branch=pj%2Fapi-versioning#692b8d58f3a0c384cb0028d8089addc4f2d47713"
+source = "git+https://github.com/panekj/rust-weechat?branch=pj%2Fapi-versioning#510203c13d29efbedf68e90e8d73a9babc7a97e9"
 dependencies = [
  "bindgen",
  "libc",
